@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private GameObject _object;
+    [SerializeField] private GameObject _enemy;
     [SerializeField] private float _secondsBetweenSpawn;
     [SerializeField] private Transform[] _spawnPoints;
 
@@ -31,6 +31,6 @@ public class Spawner : MonoBehaviour
 
     private void Create()
     {
-        Instantiate(_object, _spawnPoints[_spawnNumber].position, Quaternion.identity);
+        Instantiate(_enemy, _spawnPoints[_spawnNumber].position, Quaternion.identity);
     }
 }

@@ -720,7 +720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d188691f1d4383b42aa207d1196208fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _object: {fileID: 8212526337425233690, guid: 33870c34ec1852c4f931573efd299204, type: 3}
+  _enemy: {fileID: 8212526337425233690, guid: 33870c34ec1852c4f931573efd299204, type: 3}
   _secondsBetweenSpawn: 2
   _spawnPoints:
   - {fileID: 1183102024}
