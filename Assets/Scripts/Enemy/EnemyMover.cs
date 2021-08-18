@@ -2,19 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Enemy))]
 public class EnemyMover : MonoBehaviour
 {    
     [SerializeField] private int _speed;
     [SerializeField] private float _secondsBetweenSetTarget;
 
-    private GameObject _target;
-    private Vector3 _targetDistance;
+    private Enemy _enemy;
     private Vector3 _targetPosition;
     private float _ellapsedTime;
 
     private void Start()
     {
-        _target = GameObject.FindWithTag("Player");
+        _enemy = GetComponent<Enemy>();
     }
 
     private void Update()
@@ -35,8 +35,8 @@ public class EnemyMover : MonoBehaviour
 
     private void SetTargetPosition()
     {
-        _targetPosition = _target.transform.position;
-        _targetDistance = transform.position - _targetPosition;
-        _targetPosition -= _targetDistance;
+        _targetPosition = _enemy.Target.transform.position;
+        Vector3 targetDistance = transform.position - _targetPosition;
+        _targetPosition -= targetDistance;
     }
 }

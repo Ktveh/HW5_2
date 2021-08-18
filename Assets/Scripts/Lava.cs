@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Lava : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private void Update()
     {
-        if (collision.gameObject.CompareTag("Enemy"))
-            Destroy(collision.gameObject);
+        transform.Rotate(0, Time.deltaTime, 0);
     }
 }
